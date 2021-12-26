@@ -207,3 +207,35 @@ body {
         bottom: auto;
     }
 }
+
+.projectsContainer h2{
+        margin: 2rem;
+        font-size: 2rem;
+        font-weight: 700;
+}
+
+#gitwid {
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* PROJECT MOBILE */
+
+@media only screen and (max-width: 480px){
+    .projectsContainer{
+        margin: auto;
+        text-align: center;
+    }
+
+    #gitwid{
+        flex-direction: column;
+        align-content: center;
+        padding: 0;
+    }
+
+    .gw-repo-outer {
+        width: auto !important;
+    }
+}
