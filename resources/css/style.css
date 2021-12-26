@@ -74,12 +74,28 @@ body {
     height: 4rem;
 }
 
+.mainContainer{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* MAIN MOBILE */
+
+@media only screen and (max-width: 1024px){
+    .mainContainer{
+        position: initial;
+        top: initial;
+        transform: initial;
+    }
+}
+
 /* ABOUT ME */
 
 .aboutMeContainer {
     display: flex;
     width: 70%;
-    margin: 10px auto;
+    margin: 2rem auto;
 }
 
 #aboutMeText {
@@ -140,7 +156,7 @@ body {
     display: flex;
     width: 70%;
     flex-direction: column;
-    margin: 10px auto;
+    margin: 2rem auto;
 }
 
 .skillsContainer h2 {
@@ -207,12 +223,20 @@ body {
     color: #fafafa;
 }
 
-/* FOOTBAR MOBILE */
+/* FOOTBAR TABLET */
 
 @media only screen and (max-width: 1024px){
     .footerBar{
         position: absolute;
-        bottom: auto;
+    }
+}
+
+/* FOOTBAR MOBILE */
+
+@media only screen and (max-width: 480px){
+    .footerBar{
+        position: initial;
+        bottom: 0 !important;
     }
 }
 
