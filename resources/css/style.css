@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #fafafa;
+    background-color: rgba(138, 162, 158, 0.2);
 }
 
 /* HEADER NAVBAR */
@@ -15,10 +15,6 @@ body {
     margin-left: 1.5rem;
     font-size: 1.5rem;
     letter-spacing: 0.3rem;
-}
-
-.whiteBlock {
-    height: 4rem;
 }
 
 .headerBar {
@@ -32,6 +28,7 @@ body {
     align-items: center;
     z-index: 5;
     height: 4rem;
+    background-color: #fafafa;
 }
 
 .navBar ul{
@@ -72,6 +69,12 @@ body {
 
     }
 }
+
+.whiteBlock {
+    height: 4rem;
+}
+
+/* ABOUT ME */
 
 .aboutMeContainer {
     display: flex;
@@ -131,6 +134,8 @@ body {
     }
 }
 
+/* SKILLS */
+
 .skillsContainer {
     display: flex;
     width: 70%;
@@ -164,7 +169,7 @@ body {
     align-items: space-between;
 }
 
-/* SKILL MOBILE */
+/* SKILLS MOBILE */
 
 @media only screen and (max-width: 1024px){
 
@@ -189,14 +194,17 @@ body {
     }
 }
 
+/* FOOTBAR */
+
 .footerBar {
-    margin: 1rem;
-    min-width: 100%;
-    justify-content: center;
+    padding: 1rem;
+    width: 100%;
     text-align: center;
     position: fixed;
     bottom: 0px;
     font-weight: 800;
+    background-color: rgba(219, 84, 97, 0.5);
+    color: #fafafa;
 }
 
 /* FOOTBAR MOBILE */
@@ -207,6 +215,8 @@ body {
         bottom: auto;
     }
 }
+
+/* PROJECTS */
 
 .projectsContainer h2{
         margin: 2rem;
@@ -221,12 +231,13 @@ body {
     flex-wrap: wrap;
 }
 
-/* PROJECT MOBILE */
+/* PROJECTS MOBILE */
 
 @media only screen and (max-width: 480px){
     .projectsContainer{
         margin: auto;
         text-align: center;
+        width: auto;
     }
 
     #gitwid{
@@ -238,4 +249,21 @@ body {
     .gw-repo-outer {
         width: auto !important;
     }
+}
+
+/* CONTACT ME */
+
+.contactMeContainer h2{
+    margin: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 480px){
+    .contactMeContainer h2{
+        margin: auto;
+        width: auto;
+        text-align: center;
+    }
+
 }
