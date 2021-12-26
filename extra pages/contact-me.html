@@ -25,7 +25,37 @@
     <main class="mainContainer" id="whitecontainer">
         <section class="contactMeContainer">
             <h2>Contact Me</h2>
-            <form></form>
+            <div class="container">
+                <form id="form">
+                    <div>
+                        <label for="username">Nombre</label>
+        
+                        <input type="text" name="username" id="username" placeholder="Nombre Completo"/>
+                        
+                        <i class="fas fa-exclamation-circle failure-icon"></i>
+                        <i class="far fa-check-circle success-icon"></i>
+                        
+                        <div class="error"></div>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        
+                        <input type="email" name="email" id="email" placeholder="xxx@xxx.com"/>
+                        
+                        <i class="fas fa-exclamation-circle failure-icon"></i>
+                        <i class="far fa-check-circle success-icon"></i>
+                        
+                        <div class="error"></div>
+                    </div>
+                    <div>
+                        <label for="textarea">Comentarios</label>
+
+                        <textarea type="textarea" name="textarea" id="textarea" rows="3" cols="30">I want to contact you because..</textarea>
+                    </div>
+
+                    <button id="btn" type="submit">Submit</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer class="footerBar">Made with &lt;3 in Argentina</footer>
