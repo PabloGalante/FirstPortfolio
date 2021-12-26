@@ -13,33 +13,46 @@
 <body>
     <header class="headerBar">
         <h1>Pablo Galante</h1>
+        <nav class="navBar">
+            <ul>
+                <li><a class="links" href="#whitecontainer">About Me</a></li>
+                <li><a class="links" href="extra pages/projects.html">Projects</a></li>
+                <li><a class="links" href="extra pages/contact-me.html">Contact Me</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav class="navBar">
-        <ul>
-            <li>About Me</li>
-            <li>Projects</li>
-            <li>Contact Me</li>
-        </ul>
-    </nav>
-    <main class="mainContainer">
+    <div class="whiteBlock"></div>
+    <main class="mainContainer" id="whitecontainer">
         <section class="aboutMeContainer">
+            <div id="aboutMeText">
             <h2>About Me</h2>
             <p>Since I graduated from high school as mercantile expert I worked in a Nursing Home taking care of Administration and Customer Support tasks using Excel as a primary tool. At the same time, I studied to be a Cook in order to give advice in the kitchen. At the moment I'm studying programming as a Full Stack Engineer</p>
+            </div>
             <figure id="myFace">
                 <img alt="Photo of Me" src="resources/images/photoofme.jpg">
             </figure>
         </section>
         <section class="skillsContainer">
             <h2>Skills</h2>
+            <div class="iconList">
             <i class="fab fa-html5"></i>
+            <span>HTML 5</span>
             <i class="fab fa-css3-alt"></i>
+            <span>CSS3</span>
             <i class="fab fa-js"></i>
+            <span>Javascript</span>
             <i class="fab fa-git"></i>
+            <span>Git</span>
             <i class="fab fa-chrome"></i>
+            <span>Chrome DevTools</span>
             <i class="fas fa-terminal"></i>
+            <span>Terminal</span>
             <i class="fas fa-universal-access"></i>
+            <span>Universal Access</span>
             <i class="fab fa-github"></i>
+            <span>GitHub</span>
+            </div>
         </section>
     </main>
-    <footer class="footerBar">Made with &lt;3 in Argentina</footer>
+    <footer class="footerBar"><span>Made with &lt;3 in Argentina</span></footer>
 </body>

@@ -1,3 +1,209 @@
 * {
     font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+/* HEADER NAVBAR */
+
+.headerBar h1 {
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+}
+
+.whiteBlock {
+    height: 4rem;
+}
+
+.headerBar {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    align-content: center;
+    align-items: center;
+    z-index: 5;
+    height: 4rem;
+}
+
+.navBar ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+.navBar ul li {
+    display: inline-flex;
+    padding: 1.2rem;
+}
+
+.links, :hover, :visited {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+/* HEADER NAVBAR MOBILE */
+
+@media only screen and (max-width: 600px) {
+
+    .navBar {
+        display: none;
+    }
+
+    .headerBar {
+        display: flex;
+        justify-content: center;
+        margin: auto 0;
+        position: absolute;
+    }
+
+    .headerBar h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+
+    }
+}
+
+.aboutMeContainer {
+    display: flex;
+    width: 70%;
+    margin: 10px auto;
+}
+
+#aboutMeText {
+    justify-content: left;
+    margin: auto 3rem;
+    line-height: 1.6rem;
+    overflow: auto;
+}
+
+#aboutMeText h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#myFace {
+    justify-content: right;
+    padding: 0.5rem;
+} 
+
+#myFace img {
+    border-radius: 10%;
+}
+
+/* ABOUT ME MOBILE TO TABLET (LANDSCAPE) */
+
+@media only screen and (max-width: 1024px){
+    .aboutMeContainer{
+        display: block;
+        margin: auto;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .aboutMeContainer h2{
+        margin: 1rem;
+    }
+
+    #myFace {
+        margin: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 340px){
+    #myFace img {
+        width: 150px;
+    }
+
+    .mainContainer {
+        display: block;
+    }
+}
+
+.skillsContainer {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    margin: 10px auto;
+}
+
+.skillsContainer h2 {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: auto 3rem;
+    line-height: 1.6rem;
+    justify-content: left;
+}
+
+.iconList {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 40px 1fr);
+    margin: 0.5rem;
+}
+
+.iconList i {
+    font-size: 2rem;
+    margin: auto;
+}
+
+.iconList span {
+    font-weight: 400;
+    padding: 10px;
+    align-items: space-between;
+}
+
+/* SKILL MOBILE */
+
+@media only screen and (max-width: 1024px){
+
+    .skillsContainer h2{
+        width: auto;
+        margin: auto;
+    }
+
+    .iconList {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+
+    .iconList i{
+        margin: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .iconList span {
+        display: none;
+    }
+}
+
+.footerBar {
+    margin: 1rem;
+    min-width: 100%;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    font-weight: 800;
+}
+
+/* FOOTBAR MOBILE */
+
+@media only screen and (max-width: 1024px){
+    .footerBar{
+        position: absolute;
+        bottom: auto;
+    }
 }
