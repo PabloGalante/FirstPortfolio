@@ -339,14 +339,17 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    color: black;
 }
 
 .contactMeIcons a {
     margin: auto;
+    color: black;
 }
 
 .contactMeIcons a i{
     font-size: 3rem;
+    color: black;
 }
 
 /* CONTACT ME TABLET */
