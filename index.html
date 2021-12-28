@@ -7,22 +7,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="resources/css/all.css">
-    <script rel="script" href="resources/js/script.js"></script>
     <title>Pablo Galante</title>
 </head>
 <body>
     <header class="headerBar">
         <h1>Pablo Galante</h1>
-        <nav class="navBar">
+        <nav class="navBar" id="navBarId">
             <ul>
                 <li><a class="links" href="#whitecontainer">About Me</a></li>
                 <li><a class="links" href="extra pages/projects.html">Projects</a></li>
                 <li><a class="links" href="extra pages/contact-me.html">Contact Me</a></li>
+                <a href="javascript:void(0);" class="icon" onclick="menu()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </ul>
         </nav>
     </header>
     <div class="whiteBlock"></div>
-    <main class="mainContainer" id="whitecontainer">
+    <main class="mainContainer">
         <section class="aboutMeContainer">
             <div id="aboutMeText">
             <h2>About Me</h2>
@@ -55,4 +57,6 @@
         </section>
     </main>
     <footer class="footerBar"><span>Made with &lt;3 in Argentina</span></footer>
+
+    <script type="text/javascript" src="resources/js/script.js"></script>
 </body>

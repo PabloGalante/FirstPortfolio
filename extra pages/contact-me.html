@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../resources/css/style.css">
     <link rel="stylesheet" href="../resources/css/all.css">
-    <script rel="script" href="../resources/js/script.js"></script>
     <title>Pablo Galante</title>
 </head>
 <body>
@@ -22,15 +21,15 @@
         </nav>
     </header>
     <div class="whiteBlock"></div>
-    <main class="mainContainer" id="whitecontainer">
+    <main class="mainContainer" id="contactPage">
+        <h2>Contact Me</h2>
         <section class="contactMeContainer">
-            <h2>Contact Me</h2>
             <div class="container">
-                <form id="form">
+                <form id="form" onsubmit="alert('Sent!');">
                     <div>
                         <label for="username">Nombre</label>
         
-                        <input type="text" name="username" id="username" placeholder="Nombre Completo"/>
+                        <input type="text" name="username" id="username" placeholder="Nombre Completo" required/>
                         
                         <i class="fas fa-exclamation-circle failure-icon"></i>
                         <i class="far fa-check-circle success-icon"></i>
@@ -40,7 +39,7 @@
                     <div>
                         <label for="email">Email</label>
                         
-                        <input type="email" name="email" id="email" placeholder="xxx@xxx.com"/>
+                        <input type="email" name="email" id="email" placeholder="xxx@xxx.com" required/>
                         
                         <i class="fas fa-exclamation-circle failure-icon"></i>
                         <i class="far fa-check-circle success-icon"></i>
@@ -53,10 +52,20 @@
                         <textarea type="textarea" name="textarea" id="textarea" rows="3" cols="30">I want to contact you because..</textarea>
                     </div>
 
-                    <button id="btn" type="submit">Submit</button>
+                    <button id="btn" type="submit" onclick="sendmail()">Submit</button>
                 </form>
             </div>
         </section>
+        <h3>OR</h3>
+        <section class="contactMeIcons">
+            <a href="https://www.instagram.com/pablogalantee/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/PabloGalante" target="_blank"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/in/pablogastongalante/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </section>
     </main>
     <footer class="footerBar">Made with &lt;3 in Argentina</footer>
+    
+    <script type="text/javascript" src="../resources/js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="../resources/js/emailjs.js"></script>
 </body>
