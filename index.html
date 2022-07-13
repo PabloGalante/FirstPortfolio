@@ -12,7 +12,7 @@
 </head>
 <body>
     <header class="headerBar">
-        <a href="index.html"><h1>Pablo Galante</h1></a>
+        <a href="index.html" class="headerBar-title"><h1>Pablo Galante</h1></a>
         <nav class="navBar" id="navBarId">
             <ul>
                 <li><a class="links" href="#whitecontainer">About Me</a></li>
@@ -20,16 +20,20 @@
                 <li><a class="links" href="extra pages/contact-me.html">Contact Me</a></li>
             </ul>
         </nav>
-        <a href="javascript:void(0);" class="icon" onclick="menu()">
+        <button class="icon" id="hamNav" onclick="responsiveMenu()">
             <i class="fa fa-bars"></i>
-        </a>
+        </button>
     </header>
     <div class="whiteBlock"></div>
     <main class="mainContainer">
         <section class="aboutMeContainer">
             <div id="aboutMeText">
             <h2>About Me</h2>
-            <p>Since I graduated from high school as mercantile expert I worked in a Nursing Home taking care of Administration and Customer Support tasks using Excel as a primary tool. At the same time, I studied to be a Cook in order to give advice in the kitchen. At the moment I'm studying programming as a Full Stack Engineer</p>
+            <p>
+                Siempre en movimiento, buscando crecer en todos los ámbitos de mi vida. 
+                Busco la autonomía laboral como fin, con la constancia como medio. 
+                Actualmente formándome en programación Full Stack y buscando avanzar mi carrera en la industria IT
+            </p>
             </div>
             <figure id="myFace">
                 <img alt="Photo of Me" src="resources/images/photoofme.jpg">
@@ -38,24 +42,26 @@
         <section class="skillsContainer">
             <h2>Skills</h2>
             <div class="iconList">
-            <i class="fab fa-html5"></i>
-            <span>HTML 5</span>
-            <i class="fab fa-css3-alt"></i>
-            <span>CSS3</span>
-            <i class="fab fa-js"></i>
-            <span>Javascript</span>
-            <i class="fab fa-git"></i>
-            <span>Git</span>
-            <i class="fab fa-chrome"></i>
-            <span>Chrome DevTools</span>
-            <i class="fas fa-terminal"></i>
-            <span>Terminal</span>
-            <i class="fas fa-universal-access"></i>
-            <span>Universal Access</span>
-            <i class="fab fa-github"></i>
-            <span>GitHub</span>
-            <i class="fa-brands fa-react"></i>
-            <span>React</span>
+                <i class="fab fa-html5"></i>
+                <span>HTML 5</span>
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+                <i class="fab fa-js"></i>
+                <span>Javascript</span>
+                <i class="fab fa-git"></i>
+                <span>Git</span>
+                <i class="fab fa-chrome"></i>
+                <span>Chrome DevTools</span>
+                <i class="fas fa-terminal"></i>
+                <span>Terminal</span>
+                <i class="fas fa-universal-access"></i>
+                <span>Universal Access</span>
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+                <i class="fab fa-react"></i>
+                <span>React</span>
+                <img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMzIiIGhlaWdodD0iMzIiCnZpZXdCb3g9IjAgMCAzMiAzMiIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBkPSJNIDE1LjUgNCBDIDExLjM2NCA0IDggOC41NDg2MjUgOCAxNC4xNDA2MjUgQyA4IDE2Ljg2NTEwOCA4LjgwODY1NTIgMTkuMzI3MzU3IDEwLjEwNzQyMiAyMS4xNTAzOTEgQSAxLjc1IDEuNzUgMCAwIDAgMTEuNzUgMjMuNSBBIDEuNzUgMS43NSAwIDEgMCAxMS43NSAyMCBBIDEuNzUgMS43NSAwIDAgMCAxMS42OTcyNjYgMjAuMDAxOTUzIEMgMTAuNjUzNTg3IDE4LjUyMDc4NSAxMCAxNi40NDM5MjYgMTAgMTQuMTQwNjI1IEMgMTAgOS42NTE2MjUgMTIuNDY4IDYgMTUuNSA2IEMgMTcuNjcgNiAxOS41NDU0NTMgNy44NzQwMzEyIDIwLjQzOTQ1MyAxMC41ODIwMzEgQyAyMS4yMTE0NTMgMTAuODEwMDMxIDIxLjk3NzYwOSAxMS4wOTgwMzEgMjIuNzI0NjA5IDExLjQ1NzAzMSBDIDIxLjg1MTYwOSA3LjE2NTAzMTMgMTguOTQ4IDQgMTUuNSA0IHogTSAxNC4yNSAxMS43NSBBIDEuNzUgMS43NSAwIDEgMCAxNC4yNSAxNS4yNSBBIDEuNzUgMS43NSAwIDAgMCAxNS45MDQyOTcgMTQuMDY2NDA2IEMgMTcuNzk5OTIgMTMuODQwMDY4IDIwLjAzMTE2NCAxNC4zOTMzMjEgMjIuMDY2NDA2IDE1LjY0NDUzMSBDIDI1LjkxNTQwNiAxOC4wMTI1MzEgMjcuOTU3MzkxIDIyLjI0NTY3MiAyNi41MjUzOTEgMjQuODg4NjcyIEMgMjYuMDIxMzkxIDI1LjgxNzY3MiAyNS4xMzQwNzggMjYuNDc0MDYyIDIzLjk1NTA3OCAyNi43ODkwNjIgQyAyMi43NDAwNzggMjcuMTE0MDYyIDIxLjMyNDc2NiAyNy4wNTAzNDQgMTkuODg0NzY2IDI2LjY1MjM0NCBDIDE5LjMyODc2NiAyNy4xODUzNDQgMTguNzEwNjg3IDI3LjY3ODUzMSAxOC4wNTQ2ODggMjguMTQ0NTMxIEMgMTkuNDcxNjg4IDI4LjcwMjUzMSAyMC45MjAxNTYgMjguOTk4MDQ3IDIyLjI4NTE1NiAyOC45OTgwNDcgQyAyMy4wNDYxNTYgMjguOTk4MDQ3IDIzLjc4MTcwMyAyOC45MDg2MDkgMjQuNDcwNzAzIDI4LjcyNDYwOSBDIDI2LjE5MjcwMyAyOC4yNjM2MDkgMjcuNTEwMjUgMjcuMjY3NzUgMjguMjgxMjUgMjUuODQzNzUgQyAzMC4yNjgyNSAyMi4xNzQ3NSAyNy45OTgyODEgMTYuOTQ0NDUzIDIzLjExMzI4MSAxMy45Mzk0NTMgQyAyMC41ODc2MDEgMTIuMzg0ODQzIDE3LjczOTkzNyAxMS43MzY4NDQgMTUuMzIyMjY2IDEyLjExOTE0MSBBIDEuNzUgMS43NSAwIDAgMCAxNC4yNSAxMS43NSB6IE0gNi4xMzY3MTg4IDE2LjEzODY3MiBDIDMuMjMyNzE4OCAxOS4xMTI2NzIgMi4xNTI4NDM3IDIyLjk1OTc1IDMuNzE0ODQzOCAyNS44NDM3NSBDIDQuNDg2ODQzOCAyNy4yNjc3NSA1LjgwMzM5MDYgMjguMjYzNjA5IDcuNTI1MzkwNiAyOC43MjQ2MDkgQyA4LjIxNDM5MDYgMjguOTA5NjA5IDguOTUxODkwNiAyOC45OTgwNDcgOS43MTI4OTA2IDI4Ljk5ODA0NyBDIDExLjc4ODg5MSAyOC45OTgwNDcgMTQuMDYxMTg4IDI4LjMyNjU0NyAxNi4xMTcxODggMjcuMDYwNTQ3IEMgMTguNzU2OTU5IDI1LjQzNzE2MyAyMC42MjIyNzIgMjMuMTY0Mjg2IDIxLjQ3NDYwOSAyMC44Mzk4NDQgQSAxLjc1IDEuNzUgMCAwIDAgMjAuNzUgMTcuNSBBIDEuNzUgMS43NSAwIDAgMCAxOS40NTExNzIgMjAuNDIxODc1IEMgMTguNjkxOTAxIDIyLjI0ODIxMyAxNy4xNTQyOTEgMjQuMDc1OTY2IDE1LjA3MjI2NiAyNS4zNTc0MjIgQyAxMi43MjAyNjYgMjYuODAzNDIyIDEwLjA5Mjk2OSAyNy4zMzkwMTYgOC4wNDI5Njg4IDI2Ljc5MTAxNiBDIDYuODYzOTY4NyAyNi40NzYwMTYgNS45NzU2NTYzIDI1LjgxODYyNSA1LjQ3MjY1NjIgMjQuODkwNjI1IEMgNC41MzE2NTYzIDIzLjE1MzYyNSA1LjA5NzU5MzcgMjAuNzMxNTYzIDYuNjgzNTkzOCAxOC42MDE1NjIgQyA2LjQzNzU5MzcgMTcuODE2NTYyIDYuMjQ5NzE4OCAxNi45OTQ2NzIgNi4xMzY3MTg4IDE2LjEzODY3MiB6Ij48L3BhdGg+PC9zdmc+"/>
+                <span>Redux</span>
             </div>
         </section>
     </main>

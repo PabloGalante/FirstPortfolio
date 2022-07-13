@@ -1,12 +1,3 @@
-function menu() {
-    const x = document.getElementById("navBarId");
-    if (x.className === "navBar") {
-      x.className += " responsive";
-    } else {
-      x.className = "navBar";
-    }
-  }
-
 let id = (id) => document.getElementById(id);
 
 let classes = (classes) => document.getElementsByClassName(classes);
@@ -40,3 +31,12 @@ let engine = (id, serial, message) => {
         successIcon[serial].style.opacity = "1";
     }
 }
+
+function responsiveMenu() {
+  const x = document.getElementById("navBarId");
+  if (x.className == "navBar") {
+  x.className = "navBar responsive";
+  } else {
+  x.className = "navBar";
+  }
+};

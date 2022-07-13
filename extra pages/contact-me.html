@@ -14,7 +14,7 @@
 </head>
 <body>
     <header class="headerBar">
-        <a href="../index.html"><h1>Pablo Galante</h1></a>
+        <a href="../index.html" class="headerBar-title"><h1>Pablo Galante</h1></a>
         <nav class="navBar" id="navBarId">
             <ul>
                 <li><a class="links" href="../index.html">About Me</a></li>
@@ -22,9 +22,9 @@
                 <li><a class="links" href="contact-me.html">Contact Me</a></li>
             </ul>
         </nav>
-        <a href="javascript:void(0);" class="icon" onclick="menu()">
+        <button class="icon" onclick="responsiveMenu()">
             <i class="fa fa-bars"></i>
-        </a>
+        </button>
     </header>
     <div class="whiteBlock"></div>
     <main class="mainContainer" id="contactPage">
@@ -55,7 +55,7 @@
                     <div>
                         <label for="textarea">Comentarios</label>
 
-                        <textarea type="textarea" name="textarea" id="textarea" rows="3" cols="30">I want to contact you because..</textarea>
+                        <textarea type="textarea" name="textarea" id="textarea" rows="3" cols="30" placeholder=""></textarea>
                     </div>
 
                     <button id="btn" type="submit" onclick="sendmail()">Submit</button>

@@ -11,10 +11,16 @@ body {
 
 /* HEADER NAVBAR */
 
-.headerBar h1 {
-    margin-left: 1.5rem;
+.headerBar-title{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.headerBar-title h1{
+    margin: 1.5rem;
     font-size: 1.5rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
 }
 
 .headerBar {
@@ -45,10 +51,19 @@ body {
     display: none;
 }
 
-.links, :hover, :visited {
+.links {
+    transition: ease-out 0.3s;
+}
+
+.links, :visited {
     list-style: none;
     text-decoration: none;
     color: black;
+}
+
+.links:hover {
+    font-size: 1.1rem;
+    transition: ease-in 0.3s;
 }
 
 /* HEADER NAVBAR MOBILE */
@@ -80,6 +95,10 @@ body {
       display: block;
       margin: auto 1rem;
       color: black;
+      width: 2rem;
+      height: 2rem;
+      background: white;
+      border: none;
     }
 
     .navBar.responsive {
@@ -123,7 +142,7 @@ body {
 .aboutMeContainer {
     display: flex;
     width: 70%;
-    margin: 2rem auto;
+    margin: 3rem auto;
 }
 
 #aboutMeText {
@@ -146,6 +165,8 @@ body {
 
 #myFace img {
     border-radius: 10%;
+    width: 290px;
+    height: 386px;
 }
 
 /* ABOUT ME MOBILE TO TABLET (LANDSCAPE) */
@@ -164,7 +185,7 @@ body {
     }
 
     #myFace {
-        margin: 0.5rem;
+        margin: 1.5rem;
     }
 }
 
@@ -191,7 +212,7 @@ body {
     width: 100%;
     font-size: 2rem;
     font-weight: 700;
-    margin: auto 3rem;
+    margin: 1rem 3rem;
     line-height: 1.6rem;
     justify-content: left;
 }
@@ -202,9 +223,12 @@ body {
     margin: 0.5rem;
 }
 
-.iconList i {
+.iconList i,
+.iconList img {
     font-size: 2rem;
-    margin: auto;
+    width: 40px;
+    height: 40px;
+    text-align: center;
 }
 
 .iconList span {
@@ -224,10 +248,9 @@ body {
 
     .iconList {
         grid-template-columns: 1fr 1fr;
-        text-align: center;
     }
 
-    .iconList i{
+    .iconList i, img{
         margin: 0.5rem;
     }
 }
@@ -379,6 +402,10 @@ body {
         margin: 1rem;
     }
 
+    .contactMeIcons{
+        margin-bottom: 65px;
+    }
+
     .contactMeIcons a i{
         font-size: 2rem;
     }
@@ -465,6 +492,14 @@ button {
 
 button:hover {
     opacity: 0.8;
+}
+
+#textarea {
+    resize: none;
+}
+
+#textarea:focus {
+    outline: none;
 }
 
 /* FORM MOBILE */
