@@ -5,6 +5,15 @@
     font-size: 16px;
 }
 
+@keyframes spin {
+    from {
+        transform:rotate(360deg);
+    }
+    to {
+        transform:rotate(0deg);
+    }
+}
+
 body {
     background-color: rgba(138, 162, 158, 0.2);
 }
@@ -68,7 +77,7 @@ body {
 
 /* HEADER NAVBAR MOBILE */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 755px) {
 
     /* HEADER */
     .headerBar {
@@ -156,6 +165,12 @@ body {
     margin-bottom: 2rem;
     font-size: 2rem;
     font-weight: 700;
+}
+
+.bandera {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
 }
 
 #myFace {
@@ -272,6 +287,94 @@ body {
     font-weight: 800;
     background-color: rgba(219, 84, 97, 0.5);
     color: #fafafa;
+}
+
+/* FOOTBAR MOBILE */
+
+@media only screen and (max-width: 480px){
+    .footerBar {
+        font-size: 0.6rem;
+        padding: 0.5rem;
+    }
+}
+
+/* FORMACION */
+.containerFormacion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+    padding: 10px;
+}
+
+.containerFormacion a {
+    text-align: center;
+}
+
+.containerFormacion p {
+    letter-spacing: 0.1rem;
+    line-height: 1.3rem;
+}
+
+#alura {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.divAlura {
+    grid-area: 2 / 1 / 4 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#codeacademy {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.divCodeacademy {
+    grid-area: 2 / 2 / 4 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#coderhouse {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.divCoderhouse {
+    grid-area: 2 / 3 / 4 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imgFormacion {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.imgFormacion:hover {
+    animation-name: spin;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out; 
+}
+
+/* FORMACION MOBILE */
+@media only screen and (max-width: 755px){
+    .containerFormacion {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 65px;
+    }
+    
 }
 
 /* PROJECTS */
