@@ -586,6 +586,10 @@ body {
       width: 550px;
       height: auto;
     }
+
+    .proyecto .popup-card .img-proyecto{
+        display: none;
+      }
   
     .proyecto .popup-card .img-proyecto{
       z-index: 3;
@@ -598,8 +602,7 @@ body {
     }
   
     .proyecto .popup-card .img-proyecto iframe{
-      left: initial;
-      max-width: 100%;
+        display: none;
     }
   
     .proyecto .popup-card .info{
