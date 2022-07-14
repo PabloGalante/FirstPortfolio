@@ -1,0 +1,842 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(360deg);
+    }
+    to {
+        transform:rotate(0deg);
+    }
+}
+
+body {
+    background-color: rgba(138, 162, 158, 0.2);
+}
+
+/* HEADER NAVBAR */
+
+.headerBar-title{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.headerBar-title h1{
+    margin: 1.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.headerBar {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    align-content: center;
+    align-items: center;
+    z-index: 5;
+    height: 4rem;
+    background-color: #fafafa;
+}
+
+.navBar ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+.navBar ul li {
+    display: inline-flex;
+    padding: 1.2rem;
+}
+
+.icon {
+    display: none;
+}
+
+.links {
+    transition: ease-out 0.3s;
+}
+
+.links, :visited {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.links:hover {
+    font-size: 1.1rem;
+    transition: ease-in 0.3s;
+}
+
+/* HEADER NAVBAR MOBILE */
+
+@media only screen and (max-width: 755px) {
+
+    /* HEADER */
+    .headerBar {
+        display: flex;
+        justify-content: space-between;
+        margin: auto 0;
+        position: absolute;
+    }
+
+    .headerBar h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+
+    }
+
+    /* NAVBAR */
+    .navBar {
+        display: none;
+    }
+
+    .icon {
+      float: right;
+      display: block;
+      margin: auto 1rem;
+      color: black;
+      width: 2rem;
+      height: 2rem;
+      background: white;
+      border: none;
+    }
+
+    .navBar.responsive {
+        position: absolute;
+        top: 4rem;
+        float: none;
+        display: block;
+        text-align: left;
+        background-color: #fafafa;
+        width: 100%;
+    }
+
+    .navBar.responsive ul {
+        text-align: center;
+        margin: auto;
+    }
+}
+
+.whiteBlock {
+    height: 4rem;
+}
+
+.mainContainer{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* MAIN MOBILE */
+
+@media only screen and (max-width: 1024px){
+    .mainContainer{
+        position: initial;
+        top: initial;
+        transform: initial;
+    }
+}
+
+/* ABOUT ME */
+
+.aboutMeContainer {
+    display: flex;
+    width: 70%;
+    margin: 3rem auto;
+}
+
+#aboutMeText {
+    justify-content: left;
+    margin: auto 3rem;
+    line-height: 1.6rem;
+    overflow: auto;
+}
+
+#aboutMeText h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.bandera {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+}
+
+#myFace {
+    justify-content: right;
+    padding: 0.5rem;
+} 
+
+#myFace img {
+    border-radius: 10%;
+    width: 290px;
+    height: 386px;
+}
+
+/* ABOUT ME MOBILE TO TABLET (LANDSCAPE) */
+
+@media only screen and (max-width: 1024px){
+    .aboutMeContainer{
+        display: block;
+        margin: auto;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .aboutMeContainer h2{
+        margin: 1rem;
+    }
+
+    #myFace {
+        margin: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 340px){
+    #myFace img {
+        width: 150px;
+    }
+
+    .mainContainer {
+        display: block;
+    }
+}
+
+/* SKILLS */
+
+.skillsContainer {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    margin: 3rem auto;
+}
+
+.skillsContainer h2 {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem 3rem;
+    line-height: 1.6rem;
+    justify-content: left;
+}
+
+.iconList {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 40px 1fr);
+    margin: 0.5rem;
+}
+
+.iconList i,
+.iconList img {
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.iconList span {
+    font-weight: 400;
+    padding: 10px;
+    align-items: space-between;
+}
+
+/* SKILLS MOBILE */
+
+@media only screen and (max-width: 1024px){
+
+    .skillsContainer h2{
+        width: auto;
+        margin: auto;
+    }
+
+    .iconList {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .iconList i, img{
+        margin: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .iconList span {
+        display: none;
+    }
+}
+
+/* FOOTBAR */
+
+.footerBar {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    font-weight: 800;
+    background-color: rgba(219, 84, 97, 0.5);
+    color: #fafafa;
+}
+
+/* FOOTBAR MOBILE */
+
+@media only screen and (max-width: 480px){
+    .footerBar {
+        font-size: 0.6rem;
+        padding: 0.5rem;
+    }
+}
+
+/* FORMACION */
+.containerFormacion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+    padding: 10px;
+}
+
+.containerFormacion a {
+    text-align: center;
+}
+
+.containerFormacion p {
+    letter-spacing: 0.1rem;
+    line-height: 1.3rem;
+}
+
+#alura {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.divAlura {
+    grid-area: 2 / 1 / 4 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#codeacademy {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.divCodeacademy {
+    grid-area: 2 / 2 / 4 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#coderhouse {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.divCoderhouse {
+    grid-area: 2 / 3 / 4 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imgFormacion {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.imgFormacion:hover {
+    animation-name: spin;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out; 
+}
+
+/* FORMACION MOBILE */
+@media only screen and (max-width: 755px){
+    .containerFormacion {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 65px;
+    }
+    
+}
+
+/* PROYECTOS */
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+/*Styles for proyecto card*/
+
+.proyecto .card-proyecto{
+    z-index: 1;
+    background: #1D212B;
+    color: white;
+    text-align: center;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    border-radius: 10px;
+  }
+  
+  .proyecto .card-proyectocard::before{
+    content: '';
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .proyecto .card-proyecto .img-proyecto{
+    z-index: 1;
+    position: absolute;
+    max-width: 350px;
+    width: 250px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .proyecto .card-proyecto .name{
+    z-index: 2;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 130px;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .proyecto .card-proyecto .description{
+    z-index: 2;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 80px;
+    font-size: 30px;
+    font-weight: 300;
+  }
+  
+  .proyecto .card-proyecto .popup-btn{
+    z-index: 2;
+    color: #fff;
+    background: #555;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+
+/*Styles for popup view*/
+
+.proyecto .popup-view{
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  
+  .proyecto .popup-view.active{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .proyecto .popup-card{
+    position: relative;
+    display: flex;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+  }
+  
+  .proyecto .popup-card .img-proyecto{
+    z-index: 2;
+    background: #1D212B;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 90%;
+    transform: translateY(25px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .proyecto .popup-card .img-proyecto img{
+    z-index: 2;
+    position: relative;
+    width: 450px;
+    left: -50px;
+  }
+  
+  .proyecto .popup-card .info{
+    z-index: 2;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .proyecto .popup-card .close-btn{
+    color: #555;
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  .proyecto .popup-card .info h2{
+    font-size: 40px;
+    line-height: 20px;
+    margin: 10px;
+  }
+  
+  .proyecto .popup-card .info h2 span{
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .proyecto .popup-card .info p{
+    font-size: 15px;
+    margin: 10px;
+  }
+  
+  .proyecto .popup-card .info .description{
+    font-size: 45px;
+    font-weight: 300;
+    margin: 10px;
+  }
+  
+  .proyecto .popup-card .info .add-cart-btn{
+    color: #fff;
+    background: #009DD2;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 10px auto;
+    padding: 10px 50px;
+    border-radius: 20px;
+  }
+  
+  .proyecto .popup-card .info .add-wish{
+    color: #009DD2;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+/* GITHUB REPO */
+
+.githubContainer h2{
+        margin: 2rem;
+        font-size: 2rem;
+        font-weight: 700;
+}
+
+#gitwid {
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* GITHUB REPO MOBILE */
+
+@media only screen and (max-width: 480px){
+    .githubContainer{
+        margin: auto;
+        text-align: center;
+        width: auto;
+        padding-bottom: 4rem;
+    }
+
+    #gitwid{
+        flex-direction: column;
+        align-content: center;
+        padding: 0;
+    }
+
+    .gw-repo-outer {
+        width: auto !important;
+    }
+}
+
+/* CONTACT ME */
+
+.contactMeContainer h2{
+    margin: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* CONTACT ME */
+
+#contactPage {
+    display: grid;
+    grid-template: 1fr / repeat(4,1fr);
+    grid-auto-rows: 1fr;
+    padding: 1rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#contactPage h2{
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: auto 3rem;
+    line-height: 1.6rem;
+    justify-content: left;
+    grid-area: "contact";
+}
+
+.contactMeContainer {
+    grid-area: "form";
+}
+
+#contactPage h3 {
+    grid-area: "or";
+    text-align: center;
+    font-size: 2rem;
+}
+
+.contactMeIcons {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: black;
+}
+
+.contactMeIcons a {
+    margin: auto;
+    color: black;
+}
+
+.contactMeIcons a i{
+    font-size: 3rem;
+    color: black;
+}
+
+/* CONTACT ME TABLET */
+
+@media only screen and (max-width: 1024px){
+    #contactPage {
+        grid-template: 1fr / repeat(2, 1fr);
+    }
+
+    .contactMeIcons {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* CONTACT ME MOBILE */
+
+@media only screen and (max-width: 480px){
+    #contactPage {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contactMeContainer h2{
+        margin: auto;
+        width: auto;
+        text-align: center;
+    }
+
+    #contactPage h3 {
+        grid-area: "or";
+        text-align: center;
+        font-size: 1rem;
+        margin: 1rem;
+    }
+
+    .contactMeIcons{
+        margin-bottom: 65px;
+    }
+
+    .contactMeIcons a i{
+        font-size: 2rem;
+    }
+
+    #contactPage h2{
+        text-align: center;
+        margin: auto;
+    }
+}
+
+/* FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    margin-left: 4rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form div input {
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    padding: 0 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    position: relative;
+    margin-bottom: 15px;
+}
+  
+input:focus {
+    border: 2px solid #f2796e;
+}
+
+form div i {
+    position: absolute;
+    padding: 10px;
+}
+
+.failure-icon,
+.error {
+  color: red;
+}
+
+.success-icon {
+  color: green;
+}
+
+.error {
+  font-size: 14.5px;
+  margin-top: 5px;
+}
+
+.success-icon,
+.failure-icon {
+  right: 0;
+  opacity: 0;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    height: 45px;
+    background-color: #f2796e;
+    border: 2px solid #f2796e;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#textarea {
+    resize: none;
+}
+
+#textarea:focus {
+    outline: none;
+}
+
+/* FORM MOBILE */
+
+@media only screen and (max-width: 1024px){
+
+    form {
+    margin-left: initial;
+    }
+
+}
+
+@media only screen and (max-width: 330px){
+
+    label {
+        text-align: center;
+    }
+
+    form div {
+        text-align: center;
+    }
+
+    form div input {
+        font-size: 0.5rem;
+        text-align: center;
+    }
+
+    #textarea {
+        font-size: 0.5rem;
+        text-align: center;
+    }
+}
