@@ -127,24 +127,24 @@ body {
 }
 
 .whiteBlock {
-    height: 4rem;
+    height: 5rem;
 }
 
-.mainContainer{
+/* .mainContainer{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-}
+} */
 
 /* MAIN MOBILE */
 
-@media only screen and (max-width: 1024px){
+/* @media only screen and (max-width: 1024px){
     .mainContainer{
         position: initial;
         top: initial;
         transform: initial;
     }
-}
+} */
 
 /* ABOUT ME */
 
@@ -859,6 +859,7 @@ button:hover {
 
 #textarea {
     resize: none;
+    padding: 5px;
 }
 
 #textarea:focus {

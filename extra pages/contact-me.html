@@ -32,11 +32,11 @@
         <h2>Contact Me</h2>
         <section class="contactMeContainer">
             <div class="container">
-                <form id="form" onsubmit="alert('Thanks!');">
+                <form id="form" onsubmit="(e)=>{e.preventDefault()}">
                     <div>
                         <label for="username">Nombre</label>
         
-                        <input type="text" name="username" id="username" placeholder="Nombre Completo" required/>
+                        <input type="text" name="username" id="username" placeholder="Nombre Completo" maxlength="50" required/>
                         
                         <i class="fas fa-exclamation-circle failure-icon" style="right: 15px;"></i>
                         <i class="far fa-check-circle success-icon" style="right: 15px;"></i>
@@ -54,9 +54,9 @@
                         <div class="error"></div>
                     </div>
                     <div>
-                        <label for="textarea">Comentarios</label>
+                        <label for="textarea">Mensaje</label>
 
-                        <textarea type="textarea" name="textarea" id="textarea" rows="3" cols="30" placeholder=""></textarea>
+                        <textarea type="textarea" name="textarea" id="textarea" rows="3" cols="30" placeholder="Max. 300 caracteres" maxlength="300"></textarea>
                     </div>
 
                     <button id="btn" type="submit" onclick="sendmail()">Submit</button>
