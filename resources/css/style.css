@@ -287,6 +287,7 @@ body {
     font-weight: 800;
     background-color: rgba(219, 84, 97, 0.5);
     color: #fafafa;
+    z-index: 99;
 }
 
 /* FOOTBAR MOBILE */
@@ -408,6 +409,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     height: 75vh;
   }
 
@@ -421,7 +423,7 @@ body {
     position: relative;
     width: 300px;
     height: 400px;
-    margin: 40px;
+    margin: 50px auto;
     border-radius: 10px;
   }
   
